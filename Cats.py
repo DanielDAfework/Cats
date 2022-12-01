@@ -11,7 +11,7 @@ def ShipCat():
     sys.stdout.flush()
     catImage = requests.get('https://api.thecatapi.com/v1/images/search').json()[0]['url']
 
-    account_sid = os.environ('TWILIO_ACCOUNT_SID')
+    account_sid = os.environ.get('TWILIO_ACCOUNT_SID')
     auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
 
     client = Client(account_sid, auth_token)
@@ -19,13 +19,13 @@ def ShipCat():
     message = client.messages.create(
         to=os.environ.get('TO'),
         from_=os.environ.get('FROM'),
-        body="Free Cat :)",
+        body="Free Automated Cat From Daniel <3",
         media_url=catImage,
     )
     print("Cat Should be Shipped!")
     sys.stdout.flush()
 
-schedule.every(2).minutes.do(ShipCat)
+schedule.every().hour.do(ShipCat)
 print("Application Starting!")
 sys.stdout.flush()
 
