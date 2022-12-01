@@ -1,1 +1,1 @@
-web: python3 Cats.py
+worker: python3 Cats.py
