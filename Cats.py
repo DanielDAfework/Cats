@@ -24,7 +24,7 @@ def ShipCat():
     print("Cat Should be Shipped!")
     sys.stdout.flush()
 
-schedule.every().hour.do(ShipCat)
+schedule.every().hour.at(":52").do(ShipCat)
 print("Application Starting!")
 sys.stdout.flush()
 
