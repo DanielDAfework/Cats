@@ -3,6 +3,7 @@
     "description": "A barebones Python script.",
     "image": "heroku/python",
     "repository": "https://github.com/DanielDAfework/Cats.git",
+    "addons": ["twilio"],
     "environments": {
       "test": {
         "scripts": {
