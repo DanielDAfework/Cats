@@ -1,0 +1,14 @@
+{
+    "name": "Cats & Python",
+    "description": "A barebones Python script.",
+    "image": "heroku/python",
+    "repository": "https://github.com/DanielDAfework/Cats.git",
+    "environments": {
+      "test": {
+        "scripts": {
+          "run" : "python3 Cats.py"
+        }
+      }
+    }
+  }
+  
